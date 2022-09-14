@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void handleConvert(View view) {
-        
+
         double valorDolar = Double.parseDouble(valorInput.getText().toString());
         double valorReais = valorDolar * 5.14;
-        resultText.setText("R$ " + valorReais);
+        resultText.setText(String.format("R$ %.2f", valorReais));
         valorInput.setText("");
         workings = "";
     }
